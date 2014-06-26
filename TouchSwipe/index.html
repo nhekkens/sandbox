@@ -1,0 +1,57 @@
+<html>
+
+	<head>
+		<title>Touch Swipe</title>
+
+		<!-- include stylesheets here-->
+		<link href="style.css" type="text/css" rel="stylesheet">
+
+		<!-- include javascript here-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="container">	
+
+			<div id="direction" class="box">Swipe Direction</div>
+
+			<div id="fingers" class="box">Swipe Direction / Finger Count</div>
+
+			<div id="threshold" class="box">Swipe Direction / Distance</div>
+
+		</div>
+
+		<!-- custom JS here -->
+		<script type="text/javascript">
+
+			$("#direction").swipe( {
+				//Generic swipe handler for all directions
+				swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+					$(this).text("You swiped " + direction );  
+				},
+				threshold: 50
+			});
+
+
+			$("#fingers").swipe( {
+				swipe:function(event, direction, distance, duration, fingerCount){
+					$(this).text("You swiped " + direction + " with " + fingerCount + " fingers" );
+				},
+				fingers:'all'
+			});
+
+			$("#threshold").swipe({
+				swipe:function(event, direction, distance, duration, fingerCount){
+					$(this).text("You swiped " + direction + " for " + distance + "px" );
+				},
+				threshold:100
+			});
+
+		</script>
+
+	</body>
+
+</html>
