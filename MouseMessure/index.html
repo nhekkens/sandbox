@@ -1,0 +1,51 @@
+<html>
+
+	<head>
+		<title>MouseMessure Template</title>
+
+		<!-- include stylesheets here-->
+		<link href="style.css" type="text/css" rel="stylesheet">
+		<!-- include javascript here-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		
+	</head>
+
+	<body>	
+
+		<p id="distance">Distance: <span>0</span>px</p>
+
+		<div id="element"></div>
+
+		<!-- custom JS here -->
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+				'use strict';
+
+    
+			    var mX, mY, distance,
+			        $distance = $('#distance span'),
+			        $element  = $('#element');
+
+			    function calculateDistance(elem, mouseX, mouseY) {
+			        return Math.floor(Math.sqrt(Math.pow(mouseX - (elem.offset().left+(elem.width()/2)), 2) + Math.pow(mouseY - (elem.offset().top+(elem.height()/2)), 2)));
+			    }
+
+			    $(document).mousemove(function(e) {  
+			        mX = e.pageX;
+			        mY = e.pageY;
+			        distance = calculateDistance($element, mX, mY);
+			        $distance.text(distance);
+
+			        console.log('Mouse X: ' + mX);
+			        console.log('Mouse Y: ' + mY);
+			        console.log('Distance: ' + distance);
+
+			    });
+
+			});
+
+		</script>
+	</body>
+</html>
+
