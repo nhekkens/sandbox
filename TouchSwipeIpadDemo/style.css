@@ -1,0 +1,63 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nicolayhekkens\/src\/sites\/sandbox\.com\/TouchSwipeIpadDemo\/scss\/style\.scss}line{font-family:\000031}}
+#main {
+  width: 768px;
+  height: 1024px;
+  background-color: red;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nicolayhekkens\/src\/sites\/sandbox\.com\/TouchSwipeIpadDemo\/scss\/style\.scss}line{font-family:\0000310}}
+  #main header {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    background-color: grey;
+    position: absolute;
+    top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nicolayhekkens\/src\/sites\/sandbox\.com\/TouchSwipeIpadDemo\/scss\/style\.scss}line{font-family:\0000318}}
+    #main header p {
+      padding-top: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nicolayhekkens\/src\/sites\/sandbox\.com\/TouchSwipeIpadDemo\/scss\/style\.scss}line{font-family:\0000323}}
+  #main article {
+    margin-top: 50px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nicolayhekkens\/src\/sites\/sandbox\.com\/TouchSwipeIpadDemo\/scss\/style\.scss}line{font-family:\0000327}}
+  #main footer {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    background-color: grey;
+    position: absolute;
+    bottom: 50; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nicolayhekkens\/src\/sites\/sandbox\.com\/TouchSwipeIpadDemo\/scss\/style\.scss}line{font-family:\0000337}}
+  #main #footer-two {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    background-color: green;
+    position: absolute;
+    bottom: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nicolayhekkens\/src\/sites\/sandbox\.com\/TouchSwipeIpadDemo\/scss\/style\.scss}line{font-family:\0000349}}
+  #main.nav-closed header,
+  #main.nav-closed footer {
+    display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nicolayhekkens\/src\/sites\/sandbox\.com\/TouchSwipeIpadDemo\/scss\/style\.scss}line{font-family:\0000358}}
+  #main.four article img {
+    float: left;
+    width: 20%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    padding-top: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nicolayhekkens\/src\/sites\/sandbox\.com\/TouchSwipeIpadDemo\/scss\/style\.scss}line{font-family:\0000371}}
+  #main.two article img {
+    float: left;
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nicolayhekkens\/src\/sites\/sandbox\.com\/TouchSwipeIpadDemo\/scss\/style\.scss}line{font-family:\0000384}}
+  #main.one article img {
+    display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nicolayhekkens\/src\/sites\/sandbox\.com\/TouchSwipeIpadDemo\/scss\/style\.scss}line{font-family:\0000387}}
+    #main.one article img:first-child {
+      width: 100%;
+      display: block; }

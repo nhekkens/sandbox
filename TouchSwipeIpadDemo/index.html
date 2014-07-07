@@ -1,0 +1,86 @@
+<html>
+
+	<head>
+		<title>Default Template</title>
+
+		<!-- include stylesheets here-->
+		<link href="style.css" type="text/css" rel="stylesheet">
+		<!-- include javascript here-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+
+	</head>
+
+	<body>	
+
+		<div id="main" class="four">
+
+			<header>
+				<p>Header Menu</p>
+			</header>
+
+			<article>
+				<img class="image" src="assets/one.jpg">
+				<img class="image" src="assets/two.jpg">
+				<img class="image" src="assets/three.jpg">
+				<img class="image" src="assets/four.jpg">
+			</article>
+
+			<footer>
+				<p>Footer Menu</p>
+			</footer>
+			<div id="footer-two">
+				<p>Please Swipe?</p>
+			</div>
+
+		</div>
+
+		<!-- custom JS here -->
+		<script type="text/javascript">
+
+			$("#main").swipe( {
+				//Generic swipe handler for all directions
+				swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+					$('#footer-two p').text("You swiped " + direction ); 
+
+					if ( direction === 'up') {
+						$('#main').toggleClass('nav-closed');
+					}
+
+					if ( direction === 'down') {
+						$('#main').toggleClass('nav-closed');
+					}
+
+					if ( direction === 'right') {
+
+						if ( $('#main').hasClass('two') ) {
+							$('#main').removeClass('two');
+							$('#main').addClass('one')
+						}
+
+						if ( $('#main').hasClass('four') ) {
+							$('#main').removeClass('four');
+							$('#main').addClass('two')
+						}	
+					}
+
+					if ( direction === 'left') {
+
+						if ( $('#main').hasClass('two') ) {
+							$('#main').removeClass('two');
+							$('#main').addClass('four')
+						}
+
+						if ( $('#main').hasClass('one') ) {
+							$('#main').removeClass('one');
+							$('#main').addClass('two')
+						}	
+					}
+				},
+				threshold: 50
+			});
+
+		</script>
+	</body>
+</html>
+
