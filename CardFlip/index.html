@@ -1,0 +1,51 @@
+<html>
+
+	<head>
+
+		<title>Card Flip</title>
+
+		<!-- include stylesheets here-->
+		<link href="style.css" type="text/css" rel="stylesheet">
+		<!-- include javascript here-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<!-- CARD FLIP -->
+		<article class="card-flip">
+
+			<h1>Card Flip</h1>
+
+			<button class='card-toggle'>Flip me!</button>
+
+			<section class="container">
+
+				<div id="card">
+
+					<figure class="front"></figure>
+					<figure class="back"></figure>
+
+				</div>
+
+			</section>
+		
+		</article>
+
+		<!-- custom JS here -->
+		<script type="text/javascript">
+		
+			// Card-flip event listener.
+			$('.card-toggle').on( 'click', function(){
+
+				console.log('Card Toggle Click.');
+
+				$('#card').toggleClass('flipped');
+
+			});
+
+		</script>
+	</body>
+</html>
+

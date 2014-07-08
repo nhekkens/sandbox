@@ -1,0 +1,26 @@
+article.card-flip { text-align: center; width: 100%; height: 100%; }
+article.card-flip .container { width: 320px; height: 470px; margin: 20% auto 0; position: relative; border: 1px solid #CCC; perspective: 800px; -webkit-perspective: 800px; -moz-perspective: 800px; }
+article.card-flip .container #card { width: 100%; height: 100%; position: absolute; transform-style: preserve-3d; -webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; transition: transform 1s; -webkit-transition: -webkit-transform 1s; border: 1px solid #000; }
+article.card-flip .container #card figure { display: block; position: absolute; width: 100%; height: 100%; line-height: 460px; color: white; text-align: center; font-weight: bold; font-size: 140px; margin: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; }
+article.card-flip .container #card .front { background-position: center; background-image: url(front.png); }
+article.card-flip .container #card .back { background-image: url(back.jpg); background-position: center; transform: rotateY(180deg); -webkit-transform: rotateY(180deg); -moz-transform: rotateY(180deg); }
+article.card-flip .container #card.flipped { transform: rotateY(180deg); -webkit-transform: rotateY(180deg); -moz-transform: rotateY(180deg); }
+article.card-flip .container .card-toggle { position: absolute; bottom: -40px; left: 35%; }
+
+article.cube { text-align: center; width: 100%; height: auto; background-color: rgba(0, 191, 255, 0.5); }
+article.cube .container { width: 200px; height: 200px; margin: 50px auto; position: relative; border: 1px solid #CCC; perspective: 1000px; -webkit-perspective: 1000px; -moz-perspective: 1000px; }
+article.cube .container #cube { width: 100%; height: 100%; position: absolute; transform-style: preserve-3d; -webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; transition: transform 1s; -webkit-transition: -webkit-transform 1s; -webkit-transform: translateZ(-100px); transform: translateZ(-100px); }
+article.cube .container #cube figure { width: 196px; height: 196px; display: block; position: absolute; border: 2px solid black; line-height: 200px; color: white; text-align: center; font-weight: bold; font-size: 140px; margin: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; }
+article.cube .container #cube .front { background-color: red; -webkit-transform: rotateY(0deg) translateZ(100px); transform: rotateY(0deg) translateZ(100px); }
+article.cube .container #cube .back { background-color: green; -webkit-transform: rotateX(180deg) translateZ(100px); transform: rotateX(180deg) translateZ(100px); }
+article.cube .container #cube .right { background-color: blue; -webkit-transform: rotateY(90deg) translateZ(100px); transform: rotateY(90deg) translateZ(100px); }
+article.cube .container #cube .left { background-color: purple; -webkit-transform: rotateY(-90deg) translateZ(100px); transform: rotateY(-90deg) translateZ(100px); }
+article.cube .container #cube .top { background-color: black; -webkit-transform: rotateX(90deg) translateZ(100px); transform: rotateX(90deg) translateZ(100px); }
+article.cube .container #cube .bottom { background-color: grey; -webkit-transform: rotateX(-90deg) translateZ(100px); transform: rotateX(-90deg) translateZ(100px); }
+article.cube .container #cube.show-front { -webkit-transform: translateZ(-100px) rotateY(0deg); transform: translateZ(-100px) rotateY(0deg); }
+article.cube .container #cube.show-back { -webkit-transform: translateZ(-100px) rotateX(-180deg); transform: translateZ(-100px) rotateX(-180deg); }
+article.cube .container #cube.show-right { -webkit-transform: translateZ(-100px) rotateY(-90deg); transform: translateZ(-100px) rotateY(-90deg); }
+article.cube .container #cube.show-left { -webkit-transform: translateZ(-100px) rotateY(90deg); transform: translateZ(-100px) rotateY(90deg); }
+article.cube .container #cube.show-top { -webkit-transform: translateZ(-100px) rotateX(-90deg); transform: translateZ(-100px) rotateX(-90deg); }
+article.cube .container #cube.show-bottom { -webkit-transform: translateZ(-100px) rotateX(90deg); transform: translateZ(-100px) rotateX(90deg); }
+article.cube .container .card-toggle { position: absolute; bottom: -40px; left: 35%; }

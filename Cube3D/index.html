@@ -1,0 +1,70 @@
+<html>
+
+	<head>
+
+		<title>Cube 3D</title>
+
+		<!-- include stylesheets here-->
+		<link href="style.css" type="text/css" rel="stylesheet">
+		<!-- include javascript here-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<!-- CUBE -->
+		<article class="cube">
+
+			<h1>Cube</h1>
+
+			<button class='cube-toggle' href="front">Flip to 1 (front)</button>
+			<button class='cube-toggle' href="back">Flip to 2 (back)</button>
+			<button class='cube-toggle' href="right">Flip to 3 (right)</button>
+			<button class='cube-toggle' href="left">Flip to 4 (left)</button>
+			<button class='cube-toggle' href="top">Flip to 5 (top)</button>
+			<button class='cube-toggle' href="bottom">Flip to 6 (bottom)</button>
+
+			<section class="container">
+
+				<div id="cube">
+
+					<figure class="front">1</figure>
+					<figure class="back">2</figure>
+					<figure class="right">3</figure>
+					<figure class="left">4</figure>
+					<figure class="top">5</figure>
+					<figure class="bottom">6</figure>
+
+				</div>
+
+			</section>
+
+			
+
+		</article>
+
+		<!-- custom JS here -->
+		<script type="text/javascript">
+
+			var lastFace = null;
+
+			// Card-flip event listener.
+			$('.cube-toggle').on( 'click', function(){
+
+				var face = $(this).attr('href');
+
+				console.log('Cube Toggle Clicked');
+
+				$('#cube').removeClass( 'show-' + lastFace );
+
+
+				$('#cube').addClass( 'show-' + face );
+
+				lastFace = face;
+			});
+
+		</script>
+	</body>
+</html>
+
