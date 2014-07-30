@@ -11,7 +11,11 @@ body {
 	.img-container {
 
 		text-align: center;
-		overflow: hidden;
+		
+		white-space: nowrap;
+		overflow-y: hidden;
+		overflow-x: scroll;
+		-webkit-overflow-scrolling: touch;
 
 		span {
 			color: white;
@@ -22,9 +26,10 @@ body {
 
 			width: 100%;
 			    height: 100%;
+			    display: inline-block;
 
 			div {
-			    display: block;
+			    
 			    width: 100%;
 			    height: 100%;
 			}
@@ -36,42 +41,70 @@ body {
 		.item {
 
 			.one {
-			  	background-color: #0000FF;
+			  	background-image: url('assets/1.jpeg');
+			  	background-repeat: no-repeat;
+			  	background-size: cover;
 			}
 
 			.two {
-				background-color: #00FFFF;
+				background-image: url('assets/2.jpeg');
+			  	background-repeat: no-repeat;
+			  	background-size: cover;
+			}
+
+			.three {
+			  	background-image: url('assets/3.jpeg');
+			  	background-repeat: no-repeat;
+			  	background-size: cover;
 			}
 		}
-		background-color: #000000;
 	}
 
 	#c2 {
-				.item {
+
+		.item {
 
 			.one {
-			  	background-color: #FFAEB9;
+			  	background-image: url('assets/4.jpeg');
+			  	background-repeat: no-repeat;
+			  	background-size: cover;
 			}
 
 			.two {
-				background-color: #00FFFF;
+				background-image: url('assets/5.jpeg');
+			  	background-repeat: no-repeat;
+			  	background-size: cover;
+			}
+
+			.three {
+			  	background-image: url('assets/7.jpeg');
+			  	background-repeat: no-repeat;
+			  	background-size: cover;
 			}
 		}
-		background-color: #808080;
 	}
 
 	#c3 {
-				.item {
+		.item {
 
 			.one {
-			  	background-color: #8968CD;
+			  	background-image: url('assets/7.jpeg');
+			  	background-repeat: no-repeat;
+			  	background-size: cover;
 			}
 
 			.two {
-				background-color: #00FFFF;
+				background-image: url('assets/8.jpeg');
+			  	background-repeat: no-repeat;
+			  	background-size: cover;
+			}
+
+			.three {
+			  	background-image: url('assets/9.jpeg');
+			  	background-repeat: no-repeat;
+			  	background-size: cover;
 			}
 		}
-		background-color: #C0C0C0;
 	}
 
 	#c4 {

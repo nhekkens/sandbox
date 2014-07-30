@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app>
+
+  <head>
+
+    <title>Exercise Two</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+
+  </head>
+
+  <body class='ex2'>
+
+    <div class="container" ng-init="names=[ 'Nicolay', 'Karl', 'James', 'Hodor']">
+
+      <h3>Looping with the ng-repeat Directive</h3>
+
+      <ul>
+        <li ng-repeat="name in names">{{ name }}</li>
+      </ul>
+
+    </div>
+
+    <br/>
+
+    <br/>
+
+    <div class="container" ng-init="customers=[ {name:'Nicolay', city:'London'}, {name:'Karl', city:'London'}, {name:'James', city:'Liverpool'}, {name:'Hodor',city:'Westeros'} ]">
+
+      <h3>Looping with the ng-repeat Directive</h3>
+
+      Filter:<input type="text" ng-model="name"/>
+
+      <br />
+
+      <ul>
+        <li ng-repeat="cust in customers | filter:name">{{ cust.name }} - {{ cust.city }}</li>
+      </ul>
+
+    </div>
+
+  </body>
+
+</html>

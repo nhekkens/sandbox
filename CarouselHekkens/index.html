@@ -1,0 +1,62 @@
+<html>
+
+	<head>
+
+		<title>Carousel 3D</title>
+		<meta name="viewport" content="initial-scale=1">
+		<!-- include stylesheets here-->
+		<link href="style.css" type="text/css" rel="stylesheet">
+		<!-- include javascript here-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+		<script type="text/javascript" src="carouselv2.js"></script>
+
+
+	</head>
+
+	<body>
+
+		<!-- CAROUSEL -->
+		<article class="carousel">
+
+			<h1>Carousel</h1>
+
+			<div class="carousel-container">
+
+				<div id="carousel">
+
+					<figure><div style="background-image: url('assets/1.jpg');"></div></figure>
+					<figure><div style="background-image: url('assets/2.jpg');"></div></figure>
+					<figure><div style="background-image: url('assets/3.jpg');"></div></figure>
+					<figure><div style="background-image: url('assets/4.jpg');"></div></figure>
+					<figure><div style="background-image: url('assets/5.jpg');"></div></figure>
+					<figure><div style="background-image: url('assets/6.jpg');"></div></figure>
+					<figure><div style="background-image: url('assets/7.jpg');"></div></figure>
+					<figure><div style="background-image: url('assets/1.jpg');"></div></figure>
+					<figure><div style="background-image: url('assets/2.jpg');"></div></figure>
+					<figure><div style="background-image: url('assets/3.jpg');"></div></figure>
+					<figure><div style="background-image: url('assets/4.jpg');"></div></figure>
+					<figure><div style="background-image: url('assets/5.jpg');"></div></figure>
+					<figure><div style="background-image: url('assets/6.jpg');"></div></figure>
+					<figure><div style="background-image: url('assets/7.jpg');"></div></figure>
+
+				</div>
+
+			</div>
+
+			<!-- Next prev controls ( Must have .navigation & data-increment -1/1 ) -->
+			</br>
+			<button class="navigation" id="previous" data-increment="-1">Previous</button>
+			<button class="navigation" id="next" data-increment="1">Next</button>
+
+		</article>
+
+
+
+		<!-- custom JS here -->
+		<script type="text/javascript">
+  			Detectizr.detect({detectScreen:false});
+		</script>
+	</body>
+</html>
+

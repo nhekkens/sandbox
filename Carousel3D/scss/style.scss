@@ -7,7 +7,7 @@ article.carousel {
 	width: 100%;
 	height: auto;
 
-	.container { 
+	.container {
 
 		// width: 210px;
   // 		height: 140px;
@@ -30,6 +30,14 @@ article.carousel {
 			-webkit-transition: -webkit-transform 1s;
 			-moz-transition: -moz-transform 1s;
 			// -webkit-transform: translateZ( -288px );
+
+			&.flip {
+				-webkit-transform: rotateX(90deg);
+			  -moz-transform:    rotateX(90deg);
+			  -ms-transform:     rotateX(90deg);
+			  -o-transform:      rotateX(90deg);
+			  transform:         rotateX(90deg);
+			}
 
 			figure {
 

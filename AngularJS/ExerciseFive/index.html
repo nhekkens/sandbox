@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+
+  <head>
+
+    <title>Exercise Five</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <!-- angular -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-route.js"></script>
+  </head>
+
+  <body class='ex5'>
+
+    <div>
+      <!-- view container -->
+      <div ng-view=""></div>
+
+    </div>
+
+    <script>
+
+      // Create Module
+      var demoApp = angular.module( 'demoApp', ['ngRoute'] );
+
+      // Config route
+      demoApp.config( function ($routeProvider) {
+        $routeProvider
+
+          .when('/view1',
+            {
+              controller: 'SimpleController',
+              templateUrl: 'partials/view1.html'
+            })
+
+          .when('/view2',
+            {
+              controller: 'SimpleController',
+              templateUrl: 'partials/view2.html'
+            })
+
+          .otherwise({ redirectTo: '/view1' });
+
+          // https://euw.api.pvp.net/api/lol/euw/v1.3/game/by-summoner/28187872/recent?api_key=43b8a50b-cdba-4dfb-b9af-ad4d0c10aa26
+          RestangularProvider.setBaseUrl('https://euw.api.pvp.net/api/lol/euw/v1.3/game/by-summoner/');
+
+          RestangularProvider.setDefaultRequestParams({ apiKey: '43b8a50b-cdba-4dfb-b9af-ad4d0c10aa26' })
+
+      });
+
+      function ListRecent($scope, Restangular) {
+         $scope.recent = Restangular.all("projects").getList().$object;
+      }
+
+      // Controllers
+      var controllers = {};
+
+      controllers.SimpleController = function SimpleController($scope) {
+
+          $scope.customers = [
+
+            { name:'Nicolay', city:'London' },
+            { name:'Karl', city:'London' },
+            { name:'James', city:'Liverpool' },
+            { name:'Hodor',city:'Westeros' }
+
+          ];
+
+          $scope.addCustomer = function() {
+
+            $scope.customers.push(
+              { name: $scope.newCustomer.name, city: $scope.newCustomer.city}
+            );
+
+          };
+      };
+
+      demoApp.controller(controllers);
+
+    </script>
+  </body>
+
+</html>

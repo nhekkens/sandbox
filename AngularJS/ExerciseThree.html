@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app>
+
+  <head>
+
+    <title>Exercise Three</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+
+  </head>
+
+  <body class='ex3'>
+
+
+    <div class="container" ng-controller="SimpleController">
+
+      <h3>Using a View and Controller</h3>
+
+      Filter:<input type="text" ng-model="name"/>
+
+      <br />
+
+      <ul>
+        <li ng-repeat="cust in customers | filter:name">{{ cust.name }} - {{ cust.city }}</li>
+      </ul>
+
+    </div>
+
+    <script>
+
+      function SimpleController($scope) {
+
+          $scope.customers = [
+
+            { name:'Nicolay', city:'London' },
+            { name:'Karl', city:'London' },
+            { name:'James', city:'Liverpool' },
+            { name:'Hodor',city:'Westeros' }
+
+          ]
+      }
+
+    </script>
+  </body>
+
+</html>

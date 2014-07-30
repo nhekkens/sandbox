@@ -1,0 +1,72 @@
+article.carousel {
+  text-align: center;
+  width: 100%;
+  height: auto; }
+  article.carousel .container .menu-hekkens-container {
+    position: absolute;
+    right: 50%;
+    top: 139px;
+    cursor: pointer; }
+    article.carousel .container .menu-hekkens-container span {
+      font-size: 44px;
+      display: inline-block;
+      font-family: arial; }
+    article.carousel .container .menu-hekkens-container .menu-hekkens {
+      margin: 0 auto;
+      padding-left: 1.25em;
+      position: relative;
+      width: 36px;
+      height: 70px;
+      display: inline-block; }
+      article.carousel .container .menu-hekkens-container .menu-hekkens .menu-hekkens-global {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        position: absolute;
+        height: 100%;
+        -webkit-transition: 0.55s;
+        transition: 0.55s; }
+      article.carousel .container .menu-hekkens-container .menu-hekkens .menu-hekkens-top {
+        top: 0;
+        left: 0;
+        border-right: 6px solid black;
+        height: 100%; }
+      article.carousel .container .menu-hekkens-container .menu-hekkens .menu-hekkens-middle {
+        top: 32px;
+        left: 0;
+        border-top: 6px solid black;
+        width: 100%; }
+      article.carousel .container .menu-hekkens-container .menu-hekkens .menu-hekkens-bottom {
+        top: 0;
+        right: 0;
+        border-right: 6px solid black;
+        height: 100%; }
+      article.carousel .container .menu-hekkens-container .menu-hekkens .menu-hekkens-top-click {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        left: 25px;
+        top: 8px;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transition: 0.55s 0.5s;
+        transition: 0.55s 0.5s; }
+      article.carousel .container .menu-hekkens-container .menu-hekkens .menu-hekkens-middle-click {
+        opacity: 0; }
+      article.carousel .container .menu-hekkens-container .menu-hekkens .menu-hekkens-bottom-click {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        right: 25px;
+        top: 8px;
+        -webkit-transform: rotate(-405deg);
+        -ms-transform: rotate(-405deg);
+        transform: rotate(-405deg);
+        -webkit-transition: 0.55s 0.5s;
+        transition: 0.55s 0.5s; }
+    article.carousel .container .menu-hekkens-container p {
+      font-family: arial;
+      position: absolute;
+      color: black;
+      left: 1px;
+      top: 60px;
+      border-top: 1px solid black;
+      width: 55px; }

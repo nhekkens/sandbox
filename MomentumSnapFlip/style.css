@@ -6,35 +6,65 @@ body {
     height: 100% !important; }
   body .img-container {
     text-align: center;
-    overflow: hidden; }
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch; }
     body .img-container span {
       color: white;
       font-size: 40px; }
     body .img-container .item {
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      display: inline-block; }
       body .img-container .item div {
-        display: block;
         width: 100%;
         height: 100%; }
-  body #c1 {
-    background-color: #000000; }
-    body #c1 .item .one {
-      background-color: #0000FF; }
-    body #c1 .item .two {
-      background-color: #00FFFF; }
-  body #c2 {
-    background-color: #808080; }
-    body #c2 .item .one {
-      background-color: #FFAEB9; }
-    body #c2 .item .two {
-      background-color: #00FFFF; }
-  body #c3 {
-    background-color: #C0C0C0; }
-    body #c3 .item .one {
-      background-color: #8968CD; }
-    body #c3 .item .two {
-      background-color: #00FFFF; }
+  body #c1 .item .one {
+    background-image: url("assets/1.jpeg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; }
+  body #c1 .item .two {
+    background-image: url("assets/2.jpeg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; }
+  body #c1 .item .three {
+    background-image: url("assets/3.jpeg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; }
+  body #c2 .item .one {
+    background-image: url("assets/4.jpeg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; }
+  body #c2 .item .two {
+    background-image: url("assets/5.jpeg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; }
+  body #c2 .item .three {
+    background-image: url("assets/7.jpeg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; }
+  body #c3 .item .one {
+    background-image: url("assets/7.jpeg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; }
+  body #c3 .item .two {
+    background-image: url("assets/8.jpeg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; }
+  body #c3 .item .three {
+    background-image: url("assets/9.jpeg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; }
   body #c4 {
     background-color: #FFFFFF; }
     body #c4 .item .one {

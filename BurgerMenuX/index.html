@@ -1,0 +1,102 @@
+<html>
+
+	<head>
+
+		<title>Hekkens Burger</title>
+
+		<!-- include stylesheets here-->
+		<link href="style.css" type="text/css" rel="stylesheet">
+		<!-- include javascript here-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<!-- CAROUSEL -->
+		<article class="carousel">
+
+			<h1>Burger menu</h1>
+		
+			<section class="container">
+
+				<div class="menu-hekkens-container">
+
+					<div class="menu-hekkens">
+
+						<span class="menu-hekkens-global menu-hekkens-top"></span>
+						<span class="menu-hekkens-global menu-hekkens-middle"></span>
+						<span class="menu-hekkens-global menu-hekkens-bottom"></span>
+					</div>
+					<span>EKKENS</span>
+
+					<p class="menu-hekkens-text">MENU</p>
+
+				</div>
+
+			</section>
+
+		</article>
+
+		<!-- custom JS here -->
+		<script type="text/javascript">
+  
+			// BURGER MENU
+			var Menu = {
+
+				el: {
+					ham: $('.menu-hekkens-container'),
+					menuTop: $('.menu-hekkens-top'),
+					menuMiddle: $('.menu-hekkens-middle'),
+					menuBottom: $('.menu-hekkens-bottom')
+				},
+
+				init: function() {
+					Menu.bindUIactions();
+				},
+
+				bindUIactions: function() {
+					Menu.el.ham
+					.on(
+					'click',
+						function(event) {
+							Menu.activateMenu(event);
+							event.preventDefault();
+
+							$('#navigation').toggleClass('closed');
+
+							if ( $('.menu-hekkens-text').text() === 'MENU' ) {
+
+								$('.menu-hekkens-text').text('CLOSE');
+
+								// $('#navigation').show();
+								$('#navigation').fadeIn( '800', function() {
+									console.log('Animated.');
+								});
+
+							} else {
+
+								$('.menu-hekkens-text').text('MENU');
+
+								$('#navigation').fadeOut( '800', function() {
+									$('#navigation').hide();
+									console.log('Animated and Hidden');
+								});
+							}
+						}
+					);
+				},
+
+				activateMenu: function() {
+					Menu.el.menuTop.toggleClass('menu-hekkens-top-click');
+					Menu.el.menuMiddle.toggleClass('menu-hekkens-middle-click');
+					Menu.el.menuBottom.toggleClass('menu-hekkens-bottom-click');
+				}
+			};
+
+			Menu.init();
+
+		</script>
+	</body>
+</html>
+

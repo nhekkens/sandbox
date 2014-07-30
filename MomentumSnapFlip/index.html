@@ -9,7 +9,8 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-		<script type="text/javascript" src="owl.carousel.js"></script>
+		<!-- <script type="text/javascript" src="momentum.js"></script> -->
+		<script type="text/javascript" src="snap.js"></script>
 
 	</head>
 
@@ -18,171 +19,74 @@
 		<div id="c1" class="img-container">
 			<div class="item"><div class="one"></div></div>
 			<div class="item"><div class="two"></div></div>
+			<div class="item"><div class="three"></div></div>
 		</div>
 
 		<div id="c2" class="img-container">
 			<div class="item"><div class="one"></div></div>
 			<div class="item"><div class="two"></div></div>
+			<div class="item"><div class="three"></div></div>
 		</div>
 
 		<div id="c3" class="img-container">
 			<div class="item"><div class="one"></div></div>
 			<div class="item"><div class="two"></div></div>
+			<div class="item"><div class="three"></div></div>
+		</div>
+
+		<!-- <div id="c4" class="img-container">
+			<div class="item"><div class="one"></div></div>
+			<div class="item"><div class="two"></div></div>
+			<div class="item"><div class="three"></div></div>
+			<div class="item"><div class="four"></div></div>
 		</div>
 
 		<div id="c5" class="img-container">
 			<div class="item"><div class="one"></div></div>
 			<div class="item"><div class="two"></div></div>
+			<div class="item"><div class="three"></div></div>
+			<div class="item"><div class="four"></div></div>
 		</div>
 
 		<div id="c6" class="img-container">
 			<div class="item"><div class="one"></div></div>
 			<div class="item"><div class="two"></div></div>
+			<div class="item"><div class="three"></div></div>
+			<div class="item"><div class="four"></div></div>
 		</div>
-
-		<div id="c7" class="img-container">
-			<div class="item"><div class="one"></div></div>
-			<div class="item"><div class="two"></div></div>
-		</div>
-
-		<div id="c8" class="img-container">
-			<div class="item"><div class="one"></div></div>
-			<div class="item"><div class="two"></div></div>
-		</div>
-
-		<div id="c9" class="img-container">
-			<div class="item"><div class="one"></div></div>
-			<div class="item"><div class="two"></div></div>
-		</div>
-
-		<div id="c10" class="img-container">
-			<div class="item"><div class="one"></div></div>
-			<div class="item"><div class="two"></div></div>
-		</div>
-
-		<div id="c11" class="img-container">
-			<div class="item"><div class="one"></div></div>
-			<div class="item"><div class="two"></div></div>
-		</div>
-
-		<div id="c12" class="img-container">
-			<div class="item"><div class="one"></div></div>
-			<div class="item"><div class="two"></div></div>
-		</div>
-
-		<div id="c13" class="img-container">
-			<div class="item"><div class="one"></div></div>
-			<div class="item"><div class="two"></div></div>
-		</div>
-
-		<div id="c14" class="img-container">
-			<div class="item"><div class="one"></div></div>
-			<div class="item"><div class="two"></div></div>
-		</div>
-
-
+ -->
 		<!-- custom JS here -->
 		<script type="text/javascript">
 
 			$( document ).ready(function() {
 
-				var targetID = '';
-
-				// Get width and height of the viewport
-				function calcWindowDimensions() {
-
-					var windowWidth = $(window).width(),
-	    			windowHeight = $(window).height();
-					console.log( 'Height: ' + windowHeight + 'px --&-- Width: ' + windowWidth + 'px');
-
-					setDimensions( windowWidth, windowHeight );
-				};
-
-				// Set the height and width of the divs
-				function setDimensions( windowWidth, windowHeight ) {
-
-					var dimensions = 'width: ' + windowWidth + 'px; height: ' + windowHeight + 'px;',
-						$target = $('.img-container');
-
-					$target.each(function() {
-
-						// var bgImage = $(this).attr(,
-							// stylz = bgImage + dimensions;
-						$(this).attr( 'style', dimensions );
-
-					});	
-				};
-
-				// Incase of resize, recall
-				$(window).resize(function() {
-					calcWindowDimensions();
-					getPos();
-				});
-
-				// when user stops scrolling this calls getPos and get the target then scroll to it.
-			    var timer,
-			    	activationEvent = null;
-
-		    	// set the deligated event
-				if (Modernizr.touch) {
-					activationEvent = 'touchmove';
-				} else {
-					activationEvent = 'scroll';
-				}
-				console.log('activationEvent: ' + activationEvent );
-
-			    $(window).on( activationEvent,function () {
-			        clearTimeout(timer);
-			        timer = setTimeout( getPos , 500 );
-			    });
-
-			    var getPos = function ( flip ) { 
-
-			        console.log('Stopped Scrolling & Distance from top is: ' + window.pageYOffset );
-			        var tempH = 0;
-
-					$('.img-container').each(function() {
-
-						tempH += $(this).height();
-						console.log('tempH: ' + tempH );
-
-						if ( tempH >= ( window.pageYOffset + ( $(window).height() / 2 ) ) ) {
-							console.log('You Stopped in ' + $(this).attr( 'id' ) );
-							targetID = '#' + $(this).attr( 'id' );
-							// scroll2( $(this).attr( 'id' ) );
-							$('html,body').animate({ scrollTop: $(targetID).offset().top}, 400);
-
-							return false;
-						}
-
-					});	
-			    };
+				
 				
 			    // init
 				calcWindowDimensions();
 
 
-				function setUpCarousel() {
+				// function setUpCarousel() {
 				
-					$('.img-container').each(function() {
-						CtargetID = '#' + $(this).attr( 'id' );
-						console.log('carousel ' + CtargetID + 'Activating!');
-						$(CtargetID).owlCarousel({
+				// 	$('.img-container').each(function() {
+				// 		CtargetID = '#' + $(this).attr( 'id' );
+				// 		console.log('carousel ' + CtargetID + 'Activating!');
+				// 		$(CtargetID).owlCarousel({
 	 
-							autoPlay : 3000,
-						    stopOnHover : true,
-						    navigation:true,
-						    paginationSpeed : 1000,
-						    goToFirstSpeed : 2000,
-						    singleItem : true,
-						    autoHeight : true,
-						    transitionStyle:"fade"
+				// 			autoPlay : 3000,
+				// 		    stopOnHover : true,
+				// 		    navigation:true,
+				// 		    paginationSpeed : 1000,
+				// 		    goToFirstSpeed : 2000,
+				// 		    singleItem : true,
+				// 		    autoHeight : true,
+				// 		    transitionStyle:"fade"
 
-						});
-					})
-				};
+				// 		});
+				// 	})
+				// };
 
-				setUpCarousel();
+				// setUpCarousel();
 
 			});
 

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="user">
+
+  <head>
+
+    <title>Exercise Five</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <!-- angular -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+    <!-- router -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-route.js"></script>
+    <!-- restangular -->
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/restangular/1.3.1/restangular.js"></script>
+
+  </head>
+
+  <body>
+
+    <div>
+      <!-- view container -->
+      <div ng-view="">
+
+        User ID:<input type="text" ng-model="newUserID"/>
+
+        <br />
+
+      <a href="#/player">AddUser</a>
+
+        <br />
+
+      </div>
+
+    </div>
+
+    <script>
+
+      // Create Module
+      var user = angular.module( 'user', [ 'ngRoute', 'restangular' ] );
+
+      // Config route
+      user.config( function ($routeProvider, $locationProvider) {
+
+        $locationProvider.html5Mode(true);
+
+        $routeProvider
+          .when('/player',
+            {
+              controller: 'mainController',
+              templateUrl: 'views/player.html'
+            })
+          .when('/games',
+            {
+              controller: 'mainController',
+              templateUrl: 'partials/games.html'
+            })
+          .otherwise({ redirectTo: '/' });
+
+          // https://euw.api.pvp.net/api/lol/euw/v1.3/game/by-summoner/28187872/recent?api_key=43b8a50b-cdba-4dfb-b9af-ad4d0c10aa26
+          RestangularProvider.setBaseUrl('https://euw.api.pvp.net/api/lol/euw/v1.3/game/by-summoner/');
+
+          RestangularProvider.setDefaultRequestParams({ apiKey: '43b8a50b-cdba-4dfb-b9af-ad4d0c10aa26' })
+
+      });
+
+      // var firstAccount = accounts[0];
+
+      // function ListRecent($scope, Restangular) {
+      //    $scope.recent =
+      // }
+
+      // Controllers
+      var controllers = {};
+
+      controllers.mainController = function mainController( $scope, Restangular ) {
+
+            $scope.newUserID = function() {
+
+              $scope.userID.push(
+                { ID: $scope.newUserID }
+              );
+
+            };
+
+      });
+
+      user.controller(controllers);
+
+    </script>
+  </body>
+
+</html>
