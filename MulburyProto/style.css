@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  overflow: hidden; }
+
+#left {
+  position: absolute;
+  left: 0;
+  -webkit-transition-property: top;
+  transition-property: top;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s; }
+  #left .one {
+    background-image: url("img/01.png"); }
+  #left .two {
+    background-image: url("img/03.png"); }
+  #left .three {
+    background-color: blue; }
+  #left .four {
+    background-color: orange; }
+  #left .five {
+    background-color: yellow; }
+
+#right {
+  position: absolute;
+  right: 0;
+  -webkit-transition-property: bottom;
+  transition-property: bottom;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s; }
+  #right .one {
+    background-image: url("img/02.png"); }
+  #right .two {
+    background-image: url("img/04.png"); }
+  #right .three {
+    background-color: grey; }
+  #right .four {
+    background-color: lightgreen; }
+  #right .five {
+    background-color: lightblue; }
+
+.slide {
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  background-repeat: no-repeat; }
+  .slide h1 {
+    margin: 0; }
+  .slide.active {
+    opacity: 0.5; }
+
+#intro {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  z-index: 100;
+  position: absolute; }

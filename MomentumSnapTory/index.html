@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MomentumSnap</title>
+
+		<!-- include stylesheets here-->
+		<link href="style.css" type="text/css" rel="stylesheet">
+		<!-- include javascript here-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="c1" class="img-container">
+			<span>One</span>
+		</div>
+
+		<div id="c2" class="img-container">
+			<span>Two</span>
+		</div>
+
+		<div id="c3" class="img-container">
+			<span>Three</span>
+		</div>
+
+		<div id="c4" class="img-container">
+			<span>Four</span>
+		</div>
+
+		<div id="c5" class="img-container">
+			<span>Five</span>
+		</div>
+
+		<!-- <div id="c6" class="img-container">
+			<span>Five</span>
+		</div>
+
+		<div id="c7" class="img-container">
+			<span>Six</span>
+		</div>
+
+		<div id="c8" class="img-container">
+			<span>Seven</span>
+		</div>
+
+		<div id="c9" class="img-container">
+			<span>Eight</span>
+		</div>
+
+		<div id="c10" class="img-container">
+			<span>Nine</span>
+		</div>
+
+		<div id="c11" class="img-container">
+			<span>Ten</span>
+		</div>
+
+		<div id="c12" class="img-container">
+			<span>Eleven</span>
+		</div>
+
+		<div id="c13" class="img-container">
+			<span>Twelve</span>
+		</div>
+
+		<div id="c14" class="img-container">
+			<span>Thirteen</span>
+		</div>
+
+		<div id="c15" class="img-container">
+			<span>Fourteen</span>
+		</div>
+
+		<div id="c16" class="img-container">
+			<span>Fifteen</span>
+		</div> -->
+
+		<!-- custom JS here -->
+		<script type="text/javascript">
+
+			$( document ).ready(function() {
+
+				var targetID = '';
+
+				// Get width and height of the viewport
+				function calcWindowDimensions() {
+
+					var windowWidth = $(window).width(),
+	    			windowHeight = $(window).height();
+					console.log( 'Height: ' + windowHeight + 'px --&-- Width: ' + windowWidth + 'px');
+
+					setDimensions( windowWidth, windowHeight );
+				};
+
+				// Set the height and width of the divs
+				function setDimensions( windowWidth, windowHeight ) {
+
+					var dimensions = 'width: ' + windowWidth + 'px; height: ' + windowHeight + 'px; line-height: ' + windowHeight + 'px;',
+						$target = $('.img-container');
+					var count = $target.length;
+					$target.each(function() {
+
+						$(this).attr( 'style', dimensions );
+
+						if (!--count) {
+							getPos();
+						}
+					});
+
+
+				};
+
+				// Incase of resize, recall
+				$(window).on( 'resize orientationchange', function(event) {
+					console.log(event);
+
+					calcWindowDimensions();
+
+				});
+
+				// when user stops scrolling this calls getPos and get the target then scroll to it.
+			    var timer,
+			    	activationEvent = null;
+
+		    	// set the deligated event
+				if (Modernizr.touch) {
+					activationEvent = 'touchmove';
+				} else {
+					activationEvent = 'scroll';
+				}
+				console.log('activationEvent: ' + activationEvent );
+
+			    $(window).on( activationEvent,function () {
+			        clearTimeout(timer);
+			        timer = setTimeout( getPos , 100 );
+			    });
+
+			    var getPos = function ( flip ) {
+
+			        console.log('Stopped Scrolling & Distance from top is: ' + window.pageYOffset );
+			        var tempH = 0;
+
+					$('.img-container').each(function() {
+
+						tempH += $(this).height();
+						console.log('tempH: ' + tempH );
+
+						if ( tempH >= ( window.pageYOffset + ( $(window).height() / 2 ) ) ) {
+							console.log('You Stopped in ' + $(this).attr( 'id' ) );
+							targetID = '#' + $(this).attr( 'id' );
+							// scroll2( $(this).attr( 'id' ) );
+							$('html,body').animate({ scrollTop: $(targetID).offset().top}, 100);
+
+							return false;
+						}
+
+					});
+			    };
+
+			    // init
+				calcWindowDimensions();
+
+				// fliping divs
+				function flipTarget( targetID ) {
+
+				};
+
+			});
+
+		</script>
+	</body>
+</html>

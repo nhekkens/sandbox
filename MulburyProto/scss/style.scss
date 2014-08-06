@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  overflow:hidden;
+
+}
+
+#left {
+
+  position: absolute;
+  left: 0;
+  transition-property: top;
+  transition-duration: 0.5s;
+
+  .one {
+    // background-color: green;
+    background-image: url('img/01.png');
+  }
+
+  .two {
+    // background-color: red;
+    background-image: url('img/03.png');
+  }
+
+  .three {
+    background-color: blue;
+  }
+
+  .four {
+    background-color: orange;
+  }
+
+  .five {
+    background-color: yellow;
+  }
+}
+
+
+
+#right {
+
+  position: absolute;
+  right: 0;
+  transition-property: bottom;
+  transition-duration: 0.5s;
+
+  .one {
+    // background-color: pink;
+    background-image: url('img/02.png');
+  }
+
+  .two {
+    // background-color: purple;
+    background-image: url('img/04.png');
+  }
+
+  .three {
+    background-color: grey;
+  }
+
+  .four {
+    background-color: lightgreen;
+  }
+
+  .five {
+    background-color: lightblue;
+  }
+}
+
+.slide {
+
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  background-repeat: no-repeat;
+
+  h1 {
+    margin: 0;
+  }
+
+  &.active {
+    opacity: 0.5;
+  }
+
+  // &:hover {
+  //   opacity: 0.5;
+  // }
+}
+
+#intro {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  z-index: 100;
+  position: absolute;
+}

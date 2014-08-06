@@ -1,0 +1,42 @@
+body {
+  margin: 0; }
+  body .img-container {
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; }
+    body .img-container span {
+      color: white;
+      font-size: 40px; }
+  body #c1 {
+    background-image: url("assets/52e7f3c4a9048.jpg"); }
+  body #c2 {
+    background-image: url("assets/52e7f4ada757a.jpg"); }
+  body #c3 {
+    background-image: url("assets/52e7f52442c93.jpg"); }
+  body #c4 {
+    background-image: url("assets/52e7f56410a4d.jpg"); }
+  body #c5 {
+    background-image: url("assets/52e7f4341555a.jpg"); }
+  body #c6 {
+    background-color: #0000FF; }
+  body #c7 {
+    background-color: #008080; }
+  body #c8 {
+    background-color: #00FFFF; }
+  body #c9 {
+    background-color: #800080; }
+  body #c10 {
+    background-color: #800000; }
+  body #c11 {
+    background-color: #FF0000; }
+  body #c12 {
+    background-color: #FF00FF; }
+  body #c13 {
+    background-color: #008000; }
+  body #c14 {
+    background-color: #00FF00; }
+  body #c15 {
+    background-color: #808000; }
+  body #c16 {
+    background-color: #FFFF00; }
