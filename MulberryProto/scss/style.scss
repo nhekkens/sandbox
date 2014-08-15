@@ -4,21 +4,52 @@ body {
 
 }
 
-#left {
-
-  position: absolute;
+.left {
   left: 0;
-  transition-property: top;
+
+  .slide {
+    position: relative;
+
+    h1 {
+      position: absolute;
+      top: 70%;
+      right: 30px;
+    }
+  }
+}
+
+.right {
+  right: 0;
+
+  .slide {
+    position: relative;
+
+    h1 {
+      position: absolute;
+      top: 70%;
+      left: 30px;
+    }
+  }
+}
+
+#up {
+
+  z-index: 110;
+  position: absolute;
+
+  transition-property: bottom;
   transition-duration: 0.5s;
 
   .one {
     // background-color: green;
-    background-image: url('img/01.png');
+    background-image: url('img/04.jpg');
+    background-color: lightgreen;
   }
 
   .two {
     // background-color: red;
-    background-image: url('img/03.png');
+    background-image: url('img/06.jpg');
+    background-color: lightgreen;
   }
 
   .three {
@@ -32,25 +63,35 @@ body {
   .five {
     background-color: yellow;
   }
+
+  .final {
+    background-color: white;
+
+    background-image: url('img/08.jpg');
+  }
+
 }
 
 
 
-#right {
+#down {
 
+  z-index: 110;
   position: absolute;
-  right: 0;
-  transition-property: bottom;
+
+  transition-property: top;
   transition-duration: 0.5s;
 
   .one {
     // background-color: pink;
-    background-image: url('img/02.png');
+    background-image: url('img/05.jpg');
+    background-color: lightgreen;
   }
 
   .two {
     // background-color: purple;
-    background-image: url('img/04.png');
+    background-image: url('img/07.jpg');
+    background-color: lightgreen;
   }
 
   .three {
@@ -63,6 +104,12 @@ body {
 
   .five {
     background-color: lightblue;
+  }
+
+  .final {
+    background-color: white;
+
+    background-image: url('img/09.jpg');
   }
 }
 
@@ -91,7 +138,25 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: red;
+  background-image: url('one.jpg');
+  background-size: cover;
   z-index: 100;
   position: absolute;
+}
+
+#slide-down {
+  position: absolute;
+  z-index: 101;
+  top: 60%;
+  left: 35%;
+  color: white;
+}
+
+#choose {
+  position: absolute;
+  z-index: 111;
+  display: none;
+  top: 60%;
+  left: 40%;
+  color: black;
 }

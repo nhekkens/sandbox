@@ -2,41 +2,69 @@ body {
   margin: 0;
   overflow: hidden; }
 
-#left {
-  position: absolute;
-  left: 0;
-  -webkit-transition-property: top;
-  transition-property: top;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s; }
-  #left .one {
-    background-image: url("img/01.png"); }
-  #left .two {
-    background-image: url("img/03.png"); }
-  #left .three {
-    background-color: blue; }
-  #left .four {
-    background-color: orange; }
-  #left .five {
-    background-color: yellow; }
+.left {
+  left: 0; }
+  .left .slide {
+    position: relative; }
+    .left .slide h1 {
+      position: absolute;
+      top: 70%;
+      right: 30px; }
 
-#right {
+.right {
+  right: 0; }
+  .right .slide {
+    position: relative; }
+    .right .slide h1 {
+      position: absolute;
+      top: 70%;
+      left: 30px; }
+
+#up {
+  z-index: 110;
   position: absolute;
-  right: 0;
   -webkit-transition-property: bottom;
   transition-property: bottom;
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s; }
-  #right .one {
-    background-image: url("img/02.png"); }
-  #right .two {
-    background-image: url("img/04.png"); }
-  #right .three {
-    background-color: grey; }
-  #right .four {
+  #up .one {
+    background-image: url("img/04.jpg");
     background-color: lightgreen; }
-  #right .five {
+  #up .two {
+    background-image: url("img/06.jpg");
+    background-color: lightgreen; }
+  #up .three {
+    background-color: blue; }
+  #up .four {
+    background-color: orange; }
+  #up .five {
+    background-color: yellow; }
+  #up .final {
+    background-color: white;
+    background-image: url("img/08.jpg"); }
+
+#down {
+  z-index: 110;
+  position: absolute;
+  -webkit-transition-property: top;
+  transition-property: top;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s; }
+  #down .one {
+    background-image: url("img/05.jpg");
+    background-color: lightgreen; }
+  #down .two {
+    background-image: url("img/07.jpg");
+    background-color: lightgreen; }
+  #down .three {
+    background-color: grey; }
+  #down .four {
+    background-color: lightgreen; }
+  #down .five {
     background-color: lightblue; }
+  #down .final {
+    background-color: white;
+    background-image: url("img/09.jpg"); }
 
 .slide {
   background-position: center center;
@@ -54,6 +82,23 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: red;
+  background-image: url("one.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
   z-index: 100;
   position: absolute; }
+
+#slide-down {
+  position: absolute;
+  z-index: 101;
+  top: 60%;
+  left: 35%;
+  color: white; }
+
+#choose {
+  position: absolute;
+  z-index: 111;
+  display: none;
+  top: 60%;
+  left: 40%;
+  color: black; }
