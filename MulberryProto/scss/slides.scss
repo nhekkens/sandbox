@@ -1,0 +1,169 @@
+.left {
+  left: 0;
+
+  .slide {
+    position: relative;
+    background-position: 100% 50%;
+
+    h1 {
+      position: absolute;
+      top: 70%;
+      right: 30px;
+    }
+  }
+}
+
+.right {
+  right: 0;
+
+  .slide {
+    position: relative;
+    background-position: 0 50%;
+
+    h1 {
+      position: absolute;
+      top: 70%;
+      left: 30px;
+    }
+  }
+}
+
+#up {
+
+  z-index: 110;
+  position: absolute;
+
+  transition-property: top;
+  transition-duration: 0.5s;
+
+  .start {
+    background-image: url('img/startL.jpg');
+    background-color: white;
+  }
+
+  .one {
+    background-image: url('img/04.jpg');
+    background-color: white;
+  }
+
+  .two {
+    background-image: url('img/02_Ballon.jpg');
+    background-color: white;
+
+  }
+
+  .three {
+    background-image: url('img/03_Sneaker.jpg');
+    background-color: white;
+    background-position: -1px 50%;
+
+  }
+
+  .four {
+    background-color: red;
+  }
+
+  .five {
+    background-color: yellow;
+  }
+
+  .final {
+    background-color: white;
+
+  }
+
+}
+
+
+
+#down {
+
+  z-index: 110;
+  position: absolute;
+
+  transition-property: bottom;
+  transition-duration: 0.5s;
+
+  .start {
+    background-image: url('img/startR.jpg');
+    background-color: white;
+  }
+
+  .one {
+    background-image: url('img/05.jpg');
+    background-color: white;
+  }
+
+  .two {
+    background-image: url('img/peacebro.jpg');
+    background-color: white;
+  }
+
+  .three {
+
+    background-image: url('img/04_Highheel.jpg');
+    background-color: white;
+    background-position: 100% 50%;
+
+  }
+
+  .four {
+    background-color: blue;
+  }
+
+  .five {
+    background-color: orange;
+  }
+
+  .final {
+
+    .link {
+
+      border-left: solid 5px black;
+    }
+  }
+}
+
+.slide {
+
+  background-size: contain;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  .choose {
+    cursor: pointer;
+  }
+
+  &.active-o {
+    opacity: 0.5;
+  }
+
+  &.final {
+
+    .link {
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      top: 90%;
+      height: 30px;
+      left: 0;
+      font-size: 25px;
+      font-family: helvetica;
+      font-weight: 600;
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+}

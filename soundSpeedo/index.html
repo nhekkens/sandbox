@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="Sound level indicator.">
+  <meta name="author" content="Hekkens">
+
+  <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+  <input id="Level" />
+
+</body>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/speedometer.js"></script>
+
+  <script type="text/javascript">
+
+    $("#Level").myfunc({divFact:10,eventListenerType:'keyup'});
+  </script>
+</html>

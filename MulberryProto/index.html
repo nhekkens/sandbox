@@ -1,91 +1,203 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 	<head>
-		<title>Prototype Mulberry</title>
+		<meta charset="utf-8">
+		<title>Mulberry</title>
 
 		<!-- include stylesheets here-->
 		<link href="style.css" type="text/css" rel="stylesheet">
+
 		<!-- include javascript here-->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
-		<script type="text/javascript" src="main.js"></script>
+		<script type="text/javascript" src="js/video.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 
 	</head>
 
 	<body>
 
-		<div id='intro'>
-
+		<div id='overlay'>
+			<div class="logo">
+				<img src="img/Tree.png" />
+			</div>
+			<div class="pager">
+				<p class="">•</p>
+				<p class="">•</p>
+				<p class="">•</p>
+				<p class="">•</p>
+				<p class="">•</p>
+			</div>
+			<div class="play">
+				<img src="img/playbutton.png" />
+			</div>
+			<div class="result">
+				<h3>YOUR MATCH</h3>
+				<p><span></span></p>
+			</div>
+			<div class="selector">
+				<div class="left">
+				</div>
+				<div class="center">
+					-	OR -
+				</div>
+				<div class="right">
+				</div>
+			</div>
+			<div class="swipe-start">
+				<p></p>
+				<img src="img/arrowUp.png"/>
+			</div>
 		</div>
 
-		<div id='slide-down'>
-			<!-- <h1>Slide down to Start</h1> -->
-		</div>
-		<div id='choose'>
-			<!-- <h1>- Choose -</h1> -->
+		<div id='share-overlay'>
+			<div class="close">
+				<img src="img/X.png" />
+			</div>
+			<h3>SHARE</h3>
+			<p>Get social and show the world your Cara Delevingne bag.</p>
+			<div class="social-top">
+				<div>
+					<img class="facebook" src="img/fb.png" />
+				</div>
+				<div>
+					<img class="twitter" src="img/tw.png" />
+				</div>
+				<div>
+					<img class="instagram" src="img/in.png" />
+				</div>
+				<div>
+					<img class="pintrest" src="img/pi.png" />
+				</div>
+			</div>
+			<div class="social-bottom">
+				<div>
+					<img class="google" src="img/gp.png" />
+				</div>
+				<div>
+					<img class="weebo" src="img/we.png" />
+				</div>
+				<div>
+					<img class="tumblr" src="img/tu.png" />
+				</div>
+			</div>
 		</div>
 
-		<div id="up" class="left">
+		<div id='video-overlay'>
+			<div class="close">
+				<img src="img/close.png" />
+			</div>
+			<div class="video-container">
+				<video id="home_video" controls preload="none" poster="img/tholder.png" class="video-js vjs-default-skin vjs-big-play-centered">
+					<source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4" />
+					<source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm" />
+				</video>
+			</div>
+		</div>
+
+		<div id="up" class="left container">
+
+			<div class="slide start">
+
+			</div>
+
+			<div class="slide choose one l1" data-sibling=".right .one" data-true="a" title="BULLDOG">
+
+			</div>
+
+			<div class="slide choose two l2" data-sibling=".right .two" data-true="Beagle" title="BALLOON">
+
+			</div>
+
+			<div class="slide choose three l3" data-sibling=".right .three" data-true="Backstage" title="SNEAKER">
+
+			</div>
+
+			<div class="slide choose four l4" data-sibling=".right .four" data-true="Lipstick" title="CHOICE FOUR LEFT">
+
+			</div>
+
+			<div class="slide choose five l5" data-sibling=".right .five" data-true="Street Art" title="CHOICE FIVE LEFT">
+
+			</div>
 
 			<div class="slide final">
-				<!-- <h1>FINAL<br> left share</h1> -->
-			</div>
 
-			<!-- <div class="slide five">
-				<h1>5</h1>
-			</div>
+				<div class="shop link">
 
-			<div class="slide four">
-				<h1>4</h1>
-			</div>
+					<a href="google.com">SHOP</a>
 
-			<div class="slide three">
-				<h1>3</h1>
-			</div> -->
+				</div>
 
-			<div class="slide choose two l2">
-				<!-- <h1>Dove</h1> -->
-			</div>
-
-			<div class="slide choose one l1">
-				<!-- <h1>Pug</h1> -->
 			</div>
 
 		</div>
 
-		<div id="down" class="right">
-
-			<div class="slide choose one r1">
-				<!-- <h1>Beagle</h1> -->
-			</div>
-
-			<div class="slide choose two r2">
-				<!-- <h1>Rose</h1> -->
-			</div>
-
-			<!-- <div class="slide three">
-				<h1>3</h1>
-			</div>
-
-			<div class="slide four">
-				<h1>4</h1>
-			</div>
-
-			<div class="slide five">
-				<h1>5</h1>
-			</div> -->
+		<div id="down" class="right container">
 
 			<div class="slide final">
-				<!-- <h1>FINAL<br> right share</h1> -->
+
+				<div class="share link">
+
+					<a id="share-button" href="#">SHARE</a>
+
+				</div>
+
+			</div>
+
+			<div class="slide choose five r5" data-sibling=".left .five" title="CHOICE FIVE RIGHT">
+
+			</div>
+
+			<div class="slide choose four r4" data-sibling=".left .four" title="CHOICE FOUR RIGHT">
+
+			</div>
+
+			<div class="slide choose three r3" data-sibling=".left .three" title="HIGH-HEELS">
+
+			</div>
+
+			<div class="slide choose two r2" data-sibling=".left .two" title="PEACE">
+
+			</div>
+
+			<div class="slide choose one r1" data-sibling=".left .one" title="BEAGLE">
+
+			</div>
+
+			<div class="slide start">
+
 			</div>
 
 		</div>
 
 		<!-- custom JS here -->
-		<script type="text/javascript">
-
-
-
+		<script id="data" type="application/json">
+		{
+		    "results": [
+		        {
+		            "combination": "AAAAA",
+		            "fullImageURL": "img/result1.jpg",
+		            "imageLeftURL": "img/08.jpg",
+		            "imageRightURL": "img/09.jpg",
+		            "title": "Camo Bagpack",
+		            "shopURL": "http://google.com/shopping",
+		            "summary": "Large Cara Delevingne in Black and White Camouflage Haircalf AAAAA",
+		            "videoURL": "video/video1"
+		        },
+						{
+								"combination": "BBBBB",
+								"fullImageURL": "img/result.jpg",
+								"imageLeftURL": "img/09.jpg",
+								"imageRightURL": "img/08.jpg",
+								"title": "Camo Bagpack",
+								"shopURL": "http://google.com/shopping",
+								"summary": "Large Cara Delevingne in Black and White Camouflage Haircalf BBBBB",
+								"videoURL": "video/video1"
+						}
+		    ]
+		}
 		</script>
 	</body>
 </html>
