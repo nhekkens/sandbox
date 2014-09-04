@@ -156,6 +156,30 @@ $(document).ready(function(){
 		//The snake is now keyboard controllable
 	})
 
+  $('body').swipe( {
+    //Generic swipe handler for all directions
+    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+
+      if ( direction == 'up' && d != 'down' ) {
+        d = 'up';
+      }
+
+      if ( direction == 'down' && d != 'up' ) {
+        d = 'down';
+      }
+
+      if ( direction == 'left' && d != 'right' ) {
+        d = 'left';
+      }
+
+      if ( direction == 'right' && d != 'left' ) {
+        d = 'right';
+      }
+    },
+    threshold: 50
+  });
+
+
   $(window).on('resize', function() {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function() {
@@ -191,5 +215,10 @@ $(document).ready(function(){
 
   setDimensions();
 
+  function handleTouchMove(event) {
+    event.preventDefault();
+  }
+
+  document.addEventListener('touchmove', handleTouchMove, false);
 
 })
