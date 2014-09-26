@@ -1,0 +1,22 @@
+.level-2{
+  padding-top: 10px;
+
+  text-align: center;
+
+  max-height: 0;
+
+  -webkit-transition: max-height 0.8s;
+  -moz-transition: max-height 0.8s;
+  transition: max-height 0.8s;
+
+  overflow: hidden;
+
+  &.active {
+    max-height: 320px;
+  }
+
+  frame, h2 {
+    margin-bottom: 20px;
+  }
+
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Nicolay Hekkens - Development Test</title>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+  </head>
+	<body class="container-fluid pdp">
+
+		<!-- header -->
+		<header class="row">
+			<!-- Banner /logo -->
+			<img class="col-md-2 col-xs-6 col-sm-6" src="img/logo.png" alt="Tangent banner"/>
+			<!-- search form -->
+			<form class="col-md-offset-10 col-md-2 col-xs-offset-6 col-sm-offset-6 col-xs-6 col-sm-6" action="/search.php" id="search" method="get">
+				<div class="input-group">
+          <input type="text" class="form-control" placeholder="Enter search term...">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+          </span>
+        </div>
+			</form>
+		</header>
+
+		<!-- border -->
+		<div class="row">
+			<div class="col-md-12">
+				<div class="border-header"></div>
+			</div>
+		</div>
+
+		<!-- breadcrumbs -->
+		<div id="breadcrumbs" class="row">
+			<ul class="col-md-12">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#books">Books</a></li>
+				<li><a href="#poetry">Poetry</a></li>
+				<li><a href="#nam-posuere-turpis">Nam posuere turpis</a></li>
+			</ul>
+		</div>
+
+		<div class="row">
+
+			<!-- navigation -->
+			<nav class="col-md-2">
+				<ul class="navigation">
+					<li>
+						<span>Books</span>
+						<ul class="active">
+							<li>
+								<a href="#fiction">Fiction</a>
+							</li>
+							<li>
+								<a class="active" href="#poetry">Poetry</a>
+							</li>
+							<li>
+								<a href="#performing-arts">Performing Arts</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span>Authors</span>
+						<ul>
+							<li>
+								<a href="#Author">Author 1</a>
+							</li>
+							<li>
+								<a href="#Author">Author 2</a>
+							</li>
+							<li>
+								<a href="#Author">Author 3</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span>Finds</span>
+						<ul>
+							<li>
+								<a href="#Finds">Finds 1</a>
+							</li>
+							<li>
+								<a href="#Finds">Finds 2</a>
+							</li>
+							<li>
+								<a href="#Finds">Finds 3</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span>Book Club</span>
+						<ul>
+							<li>
+								<a href="#Club">Club 1</a>
+							</li>
+							<li>
+								<a href="#Club">Club 2</a>
+							</li>
+							<li>
+								<a href="#Club">Club 3</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+
+			<!-- product -->
+			<article>
+
+				<!-- product image -->
+				<figure class="col-md-3">
+					<img src="img/placeholder.jpg" alt="Placeholder Product Image"/>
+					<p>
+						Click for full size version
+					</p>
+				</figure>
+
+				<!-- product tiltle and copy -->
+				<div class="productInfo col-md-5 col-xs-12 col-sm-6">
+
+					<h1>Nam posuere turpis</h1>
+					<h2>Leo Semper</h2>
+
+					<p>
+						Enean mauris dui, sodales vel, viverra id, pulvinar nec, augue. Cum sociis natoque penatibus et magnis dis parturient
+						montes, nascetur ridiculus mus. Quisque magna odio, fringilla vitae, tempus eget, cursus in, dolor. Mauris lorem nibh,
+						volutpat a, ultrices et, nonummy ut, ligula. Nam ac enim nunc ultrices feugiat. In hac habitasse platea dictumst.
+					</p>
+					<p>
+						Curabitur nulla nibh, placerat sed sollicitudin in, consectetur sit amet dui. Nulla scelerisque tortor sed felis
+						dignissim scelerisque. In vehicula iaculis ante id adipiscing. In arcu dolor, rutrum nec pretium non, feugiat id metus.
+						Phasellus diam felis, volutpat sit amet scelerisque non.
+					</p>
+					<p>
+						Quisque semper augue erat, vel consequat ligula. Donec quis lectus sit ameteu leo iaculis suscipit.
+					</p>
+				</div>
+
+				<!-- basket -->
+				<div class="col-md-2 col-xs-12 col-sm-6">
+					<!-- had to use extra div because padding and bg color -->
+					<div class="basket">
+
+						<p class="price">£10.79</p>
+						<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-lock"></span> Add to basket</button>
+
+						<div class="info">
+							<p>Edition: <span>Hardback</span></p>
+							<p>ISBN: <span>01214564646</span></p>
+							<p>Published: <span>02.08.2001</span></p>
+							<p>N<sup>o</sup> of pages: <span>312</span></p>
+							<p>Age rating: <span>11+</span></p>
+						</div>
+
+					</div>
+
+				</div>
+
+			<article>
+
+		<!-- close row -->
+		</div>
+
+		<!-- border footer-->
+		<div class="row">
+			<div class="col-md-12">
+				<div class="border-footer"></div>
+		</div>
+
+		<!-- footer -->
+		<footer class="row">
+			<div class="col-md-12">
+				<a href="#">Sitemap</a>
+				<span class="devider"> | </span>
+				<a href="#">Terms & Conditions</a>
+				<span class="devider"> | </span>
+				<a href="#">Privacy</a>
+			</div>
+		<footer>
+
+		<div id="overlay">
+			<span class="glyphicon glyphicon-remove close"></span>
+			<div class="container">
+				<img src="img/placeholder.jpg" alt="Placeholder Product Image"/>
+			</div>
+		</div>
+
+		<!-- include scripts -->
+		<script src='jquery.js'></script>
+		<script src='main.js'></script>
+
+	</body>
+</html>

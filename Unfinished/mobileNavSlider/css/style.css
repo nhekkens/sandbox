@@ -1,0 +1,68 @@
+/*
+Syntax error: Invalid CSS after "}": expected selector or at-rule, was "<div class="dro..."
+        on line 32 of /Users/nicolayhekkens/src/sites/sandbox.com/mobileNavSlider/css/nav.scss
+        from line 3 of /Users/nicolayhekkens/src/sites/sandbox.com/mobileNavSlider/css/main.scss
+
+27: 
+28: }
+29: 
+30: 
+31: 
+32: <div class="droper">
+33:   <h2>Clothing</h1>
+34:   <div class="sub">
+35:     <h3>Categories</h3>
+36:     <div id="main-slider" class="frame">
+37:       <ul class="slidee">
+
+Backtrace:
+/Users/nicolayhekkens/src/sites/sandbox.com/mobileNavSlider/css/nav.scss:32
+/Users/nicolayhekkens/src/sites/sandbox.com/mobileNavSlider/css/main.scss:3
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/scss/parser.rb:1312:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/scss/parser.rb:1248:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/scss/parser.rb:42:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/engine.rb:409:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/engine.rb:305:in `to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:295:in `block in visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:88:in `block in with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:88:in `with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:294:in `visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:151:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/engine.rb:274:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:414:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:189:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:186:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:186:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:393:in `on_file_changed'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:248:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/listener.rb:236:in `call'
+/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/listener.rb:236:in `on_change'
+/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/listener.rb:271:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/adapter.rb:244:in `call'
+/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/adapter.rb:244:in `report_changes'
+/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/adapter.rb:313:in `poll_changed_directories'
+/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/adapter.rb:289:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"}\": expected selector or at-rule, was \"<div class=\"dro...\"\A         on line 32 of /Users/nicolayhekkens/src/sites/sandbox.com/mobileNavSlider/css/nav.scss\A         from line 3 of /Users/nicolayhekkens/src/sites/sandbox.com/mobileNavSlider/css/main.scss\A \A 27: \A 28: }\A 29: \A 30: \A 31: \A 32: <div class=\"droper\">\A 33:   <h2>Clothing</h1>\A 34:   <div class=\"sub\">\A 35:     <h3>Categories</h3>\A 36:     <div id=\"main-slider\" class=\"frame\">\A 37:       <ul class=\"slidee\">"; }

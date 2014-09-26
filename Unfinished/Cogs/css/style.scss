@@ -1,0 +1,114 @@
+
+// generic cog
+
+.cog {
+  position: absolute;
+}
+
+// specific positioning
+
+.one {
+  top: 40px;
+  left: 100px;
+}
+
+.two {
+  top: 60px;
+  left: 120px;
+}
+
+// sizing
+.full {
+  img {
+    width: 100%;
+  }
+}
+
+.half {
+  img {
+    width: 50%;
+  }
+}
+
+
+// rotations
+
+@keyframes clockWise {
+  from {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes clockWise /* Safari and Chrome */ {
+  from {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+.clockWise {
+  -webkit-animation: clockWise 4s linear infinite;
+  -moz-animation: clockWise 4s linear infinite;
+  -ms-animation: clockWise 4s linear infinite;
+  -o-animation: clockWise 4s linear infinite;
+  animation: clockWise 4s linear infinite;
+}
+
+@keyframes counterClockWise {
+  from {
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes counterClockWise /* Safari and Chrome */ {
+  from {
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+}
+.counterClockWise {
+  -webkit-animation: counterClockWise 4s linear infinite;
+  -moz-animation: counterClockWise 4s linear infinite;
+  -ms-animation: counterClockWise 4s linear infinite;
+  -o-animation: counterClockWise 4s linear infinite;
+  animation: counterClockWise 4s linear infinite;
+}

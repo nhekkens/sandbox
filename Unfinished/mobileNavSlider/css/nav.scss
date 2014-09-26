@@ -1,0 +1,45 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: -90%;
+  width: 90%;
+  border-bottom: 1px solid black;
+  // overflow-y: scroll;
+  max-height: 100%;
+
+
+  -webkit-transition: left 0.8s;
+  -moz-transition: left 0.8s;
+  transition: left 0.8s;
+  background-color: green;
+  // overflow: hidden;
+
+  &.active {
+    left: 0;
+  }
+  
+  .droper {
+
+    .sub {
+
+    }
+  }
+
+}
+
+
+
+<div class="droper">
+  <h2>Clothing</h1>
+  <div class="sub">
+    <h3>Categories</h3>
+    <div id="main-slider" class="frame">
+      <ul class="slidee">
+        <li>Tunics</li>
+        <li>Tops</li>
+        <li>Knitwear</li>
+        <li>Dresses & Skirts</li>
+        <li>Jackets & Outerwear</li>
+        <li>Trousers & Shorts</li>
+        <li>Denim</li>
+        <li>Swim<
