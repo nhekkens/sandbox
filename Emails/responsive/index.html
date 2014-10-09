@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Email Test</title>
+
+    <style>
+
+      div {
+        position: relative;
+        border: 1px solid red;
+        height: 300px;
+        width: 350px;
+      }
+
+      img,
+      p {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      p:after {
+        content: "- Media query not in effect";
+      }
+
+      p
+      {
+          color: white;
+          text-shadow:
+          -1px -1px 0 #000,
+          1px -1px 0 #000,
+          -1px 1px 0 #000,
+          1px 1px 0 #000;
+      }
+
+      @media (max-width: 480px) {
+        p {
+          top: 250px;
+        }
+
+        p:after {
+          content: "Media query in effect";
+        }
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+
+    <div>
+      <img src="http://i.imgur.com/Mvzj4Mc.gif" alt="hacker"/>
+      <p>HACKING IN PROGRESS</p>
+    </div>
+
+  </body>
+</html>

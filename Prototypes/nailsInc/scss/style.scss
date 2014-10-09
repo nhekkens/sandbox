@@ -1,0 +1,21 @@
+a {
+  color: black;
+
+  &:hover {
+    color: black;
+  }
+}
+
+
+@mixin icon {
+  height: 100%;
+  text-align: center;
+  padding: 10px 0 0 0;
+  img {
+    width: 100%;
+
+  }
+}
+
+@import 'header';
+@import 'main';

@@ -1,0 +1,52 @@
+a {
+  color: black; }
+  a:hover {
+    color: black; }
+
+header {
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white; }
+  header .burger {
+    padding: 10px 0 0 0; }
+    header .burger img {
+      width: 100%; }
+  header .logo {
+    height: 100%;
+    text-align: center; }
+    header .logo img {
+      height: 100%;
+      padding: 10px; }
+  header .bag {
+    height: 100%;
+    text-align: center;
+    padding: 10px 0 0 0; }
+    header .bag img {
+      width: 100%; }
+  header .search {
+    height: 100%;
+    text-align: center;
+    padding: 10px 0 0 0; }
+    header .search img {
+      width: 100%; }
+
+main {
+  margin-top: 60px; }
+  main .promo {
+    background-color: grey;
+    height: 30px;
+    line-height: 30px; }
+    main .promo div:first-child {
+      text-align: right; }
+  main .hero {
+    margin-top: 20px; }
+    main .hero img {
+      width: 100%; }
+    main .hero div h1 {
+      margin: 10px 0 0 0; }
+    main .hero div button {
+      background-color: black;
+      color: white; }

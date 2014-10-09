@@ -1,0 +1,64 @@
+
+header {
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+
+  .burger {
+    padding: 10px 0 0 0;
+    img {
+      width: 100%;
+    }
+  }
+  // banner
+  .logo {
+    height: 100%;
+    text-align: center;
+    img {
+      height: 100%;
+      padding: 10px;
+    }
+  }
+
+  // bag
+  .bag {
+    @include icon;
+  }
+
+  // search
+  .search {
+    @include icon;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    // mobile nav
+    nav {
+
+      ul {
+
+        li {
+
+        }
+      }
+    }
+    // banner
+    img {
+
+    }
+
+    // bag
+    .bag {
+
+    }
+
+    // search
+    .search {
+
+    }
+  }
+}

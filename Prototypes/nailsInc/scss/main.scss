@@ -1,0 +1,47 @@
+main {
+  margin-top: 60px;
+
+  // promo
+  .promo {
+    background-color: grey;
+    height: 30px;
+    line-height: 30px;
+    div {
+
+      a {
+        span {
+
+        }
+      }
+
+      &:first-child {
+        text-align: right;
+      }
+    }
+  }
+
+  // hero
+  .hero,
+   {
+    margin-top: 20px;
+
+    img {
+      width: 100%;
+    }
+    div {
+      h1 {
+        margin: 10px 0 0 0;
+      }
+
+      p {
+
+      }
+
+      button {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+
+}
