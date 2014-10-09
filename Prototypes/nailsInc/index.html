@@ -12,19 +12,19 @@
 
 	</head>
 
-	<body class="container">
+	<body class="container-fluid">
 
 		<header class="row">
 			<!-- mobile nav -->
-			<div class="burger hidden-md hidden-lg col-xs-1 col-sm-1">
-				<img src="img/burger.png"/>
+			<div class="burger hidden-sm col-xs-1">
+				<span class="glyphicon glyphicon-align-justify"></span>
 			</div>
 			<!-- banner -->
-			<div class="col-xs-offset-2 col-sm-offset-2 col-xs-6 col-sm-6 col-md-2 col-lg-2 logo">
+			<div class="col-xs-offset-2 col-sm-offset-0 col-xs-6 col-sm-2 logo">
 				<img src="img/logo.png"/>
 			</div>
 			<!-- desktop nav -->
-			<nav class="hidden-xs hidden-sm">
+			<nav class="hidden-xs col-sm-6">
 				<ul>
 					<li>SHOP</li>
 					<li>COUTURE BY NAILS INC</li>
@@ -32,12 +32,14 @@
 				</ul>
 			</nav>
 			<!-- bag -->
-			<div class="col-xs-offset-1 col-sm-offset-1 col-xs-1 col-sm-1 col-md-2 col-lg-2 bag">
-					<img src="img/bag.jpg"/>
+			<div class="col-xs-offset-1 col-sm-offset-0 col-xs-1 col-sm-2 bag">
+				<span class="hidden-xs d-text">Sign in / Register </span>
+					<span class="glyphicon glyphicon-shopping-cart"></span>
 			</div>
 			<!-- search -->
-			<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 search">
-					<img src="img/search.png"/>
+			<div class="col-xs-1 col-sm-offset-0 col-sm-2 search">
+					<span class="glyphicon glyphicon-search"></span>
+					<span class="hidden-xs d-text">Search</span>
 			</div>
 		</header>
 
@@ -46,10 +48,10 @@
 			<!-- promo -->
 			<section class="row promo">
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-					<a href="#">Free gift<span class="hidden-xs hidden-sm"> Lorum ipsum dolor sit amit.</span></a>
+					<a href="#">Free gift<span class="hidden-xs"> Lorum ipsum dolor sit amit.</span></a>
 				</div>
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-					<a href="#">Free delivery<span class="hidden-xs hidden-sm"> Lorum ipsum dolor sit amit.</span></a>
+					<a href="#">Free delivery<span class="hidden-xs"> Lorum ipsum dolor sit amit.</span></a>
 				</div>
 			</section>
 
@@ -57,7 +59,7 @@
 			<section class="row hero">
 				<img class="" src="img/place.jpg"/>
 				<!-- textbox -->
-				<div class="">
+				<div class="content">
 					<h1>HEADLINE</h1>
 					<p>Lorum ipsum dolor sit amit.</p>
 					<button>SHOP THE COLLECTION</button>
@@ -65,18 +67,18 @@
 			</section>
 
 			<!-- video and campaign image -->
-			<section class="row">
+			<section class="row video">
 				<!-- video -->
-				<video class="col-md-7 col-lg-7 hidden-xs hidden-sm">
+				<video class="col-sm-7 hidden-xs">
 					<source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
 					<source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
 					Your browser does not support HTML5 video.
 				</video>
 				<!-- campaign -->
-				<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 hero">
+				<div class="col-sm-5 hero2">
 					<img class="" src="img/place.jpg"/>
 					<!-- textbox -->
-					<div class="">
+					<div class="content">
 						<h1>HEADLINE</h1>
 						<p>Lorum ipsum dolor sit amit.</p>
 						<button>SHOP THE COLLECTION</button>
@@ -85,50 +87,55 @@
 			</section>
 
 			<!-- this month -->
-			<div class="row">
+			<div class="row month">
 				<h2>THIS MONTH</h2>
 			</div>
 
 			<!-- sub nav -->
-			<div class="row">
+			<div class="row sub-nav hidden-sm">
 				<ul>
-					<li>Just arrived</li>
-					<li>Top 10</li>
-					<li>Must haves</li>
+					<li class="btn btn-default col-xs-4">Just arrived</li>
+					<li class="btn btn-default col-xs-4">Top 10</li>
+					<li class="btn btn-default col-xs-4">Must haves</li>
 				</ul>
 			</div>
 
+			<!-- sub nav desktop-->
+			<div class="row sub-nav hidden-xs">
+				Just arrived   |  Top10  | Must haves
+			</div>
+
 			<!-- 4 image -->
-			<section class="row">
+			<section class="row slideshow">
 				<!-- campaign -->
 				<div class="">
 					<!-- 1 -->
-					<div class="">
+					<div class="col-sm-3 col-xs-6">
 						<img class="" src="img/place.jpg"/>
-						<h3>HEADLINE</h3>
+						<h3>PRODUCT TITLE</h3>
 						<p>Lorum ipsum dolor sit amit.</p>
-						<a href="#">SHOP THE COLLECTION</a>
+						<a href="#">SHOP NOW</a>
 					</div>
 					<!-- 2 -->
-					<div class="">
+					<div class="col-sm-3 col-xs-6">
 						<img class="" src="img/place.jpg"/>
-						<h3>HEADLINE</h3>
+						<h3>PRODUCT TITLE</h3>
 						<p>Lorum ipsum dolor sit amit.</p>
-						<a href="#">SHOP THE COLLECTION</a>
+						<a href="#">SHOP NOW</a>
 					</div>
 					<!-- 3 -->
-					<div class="">
+					<div class="col-sm-3 hidden-xs">
 						<img class="" src="img/place.jpg"/>
-						<h3>HEADLINE</h3>
+						<h3>PRODUCT TITLE</h3>
 						<p>Lorum ipsum dolor sit amit.</p>
-						<a href="#">SHOP THE COLLECTION</a>
+						<a href="#">SHOP NOW</a>
 					</div>
 					<!-- 4 -->
-					<div class="">
+					<div class="col-sm-3 hidden-xs">
 						<img class="" src="img/place.jpg"/>
-						<h3>HEADLINE</h3>
+						<h3>PRODUCT TITLE</h3>
 						<p>Lorum ipsum dolor sit amit.</p>
-						<a href="#">SHOP THE COLLECTION</a>
+						<a href="#">SHOP NOW</a>
 					</div>
 				</div>
 			</section>
@@ -136,38 +143,46 @@
 			<!-- 2 image -->
 			<section class="row">
 				<!-- campaign -->
-				<div class="">
+				<div class="hero3">
 					<!-- 1 -->
-					<div class="">
+					<div class="hero3 col-sm-6">
 						<img class="" src="img/place.jpg"/>
-						<h3>HEADLINE</h3>
-						<p>Lorum ipsum dolor sit amit.</p>
-						<a href="#">SHOP THE COLLECTION</a>
+						<div class="content">
+							<h3>HEADLINE</h3>
+							<p>Lorum ipsum dolor sit amit.</p>
+							<a href="#">SHOP NOW</a>
+						</div>
 					</div>
 					<!-- 2 -->
-					<div class="">
+					<div class="hero3 col-sm-6">
 						<img class="" src="img/place.jpg"/>
-						<h3>HEADLINE</h3>
-						<p>Lorum ipsum dolor sit amit.</p>
-						<a href="#">SHOP THE COLLECTION</a>
+						<div class="content">
+							<h3>HEADLINE</h3>
+							<p>Lorum ipsum dolor sit amit.</p>
+						</div>
 					</div>
 				</div>
 			</section>
 
 			<!-- footer  -->
 			<footer class="row">
-				<!-- help -->
-				<div class="">
+				<!-- <div class="holder"> -->
+					<!-- help -->
+					<div class="">
+						NEED HELP?<span class="glyphicon glyphicon-chevron-down"></span>
+					</div>
+					<!-- Newsltter -->
+					<div class="">
+						SIGN UP TO OUR NEWSLETTER<span class="glyphicon glyphicon-chevron-down"></span>
+					</div>
+					<!-- sharing -->
+					<div class="">
+						CONNECT WITH US<span class="glyphicon glyphicon-chevron-down"></span>
+					</div>
 
-				</div>
-				<!-- Newsltter -->
-				<div class="">
-
-				</div>
-				<!-- sharing -->
-				<div class="">
-
-				</div>
+					<p>Terms & Conditions | Privacy Policy</p>
+					<p>2014 Nails Inc Limited</p>
+				<!-- </div> -->
 			</footer>
 
 		</main>

@@ -1,0 +1,23 @@
+footer {
+    background-color: grey;
+    margin-top: 20px;
+    padding: 0;
+    div {
+      width: 80%;
+      margin: 0 auto;
+      display: block;
+      text-align: center;
+      border-bottom: 1px solid black;
+      padding: 5px;
+      span {
+        float: right;
+        font-size: 10px;
+      }
+    }
+
+    p {
+      margin: 10px;
+      text-align: center;
+      font-size: 10px;
+    }
+}

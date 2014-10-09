@@ -6,12 +6,10 @@ header {
   left: 0;
   right: 0;
   background-color: white;
+  z-index: 1000;
 
   .burger {
-    padding: 10px 0 0 0;
-    img {
-      width: 100%;
-    }
+    @include icon;
   }
   // banner
   .logo {
@@ -40,15 +38,22 @@ header {
     nav {
 
       ul {
+        list-style: none;
 
         li {
-
+          display: inline;
+          padding-left: 20px;
+          line-height: 60px;
         }
       }
     }
-    // banner
-    img {
-
+    .logo {
+      height: 100%;
+      text-align: center;
+      img {
+        height: 100%;
+        padding: 10px;
+      }
     }
 
     // bag

@@ -9,11 +9,12 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: white; }
+  background-color: white;
+  z-index: 1000; }
   header .burger {
-    padding: 10px 0 0 0; }
-    header .burger img {
-      width: 100%; }
+    text-align: center;
+    line-height: 60px;
+    font-size: 18px; }
   header .logo {
     height: 100%;
     text-align: center; }
@@ -21,18 +22,27 @@ header {
       height: 100%;
       padding: 10px; }
   header .bag {
-    height: 100%;
     text-align: center;
-    padding: 10px 0 0 0; }
-    header .bag img {
-      width: 100%; }
+    line-height: 60px;
+    font-size: 18px; }
   header .search {
-    height: 100%;
     text-align: center;
-    padding: 10px 0 0 0; }
-    header .search img {
-      width: 100%; }
+    line-height: 60px;
+    font-size: 18px; }
 
+@media (min-width: 1024px) {
+  header nav ul {
+    list-style: none; }
+    header nav ul li {
+      display: inline;
+      padding-left: 20px;
+      line-height: 60px; }
+  header .logo {
+    height: 100%;
+    text-align: center; }
+    header .logo img {
+      height: 100%;
+      padding: 10px; } }
 main {
   margin-top: 60px; }
   main .promo {
@@ -41,12 +51,83 @@ main {
     line-height: 30px; }
     main .promo div:first-child {
       text-align: right; }
-  main .hero {
-    margin-top: 20px; }
-    main .hero img {
+  main .hero,
+  main .hero2 {
+    margin-top: 20px;
+    padding: 0; }
+    main .hero img,
+    main .hero2 img {
       width: 100%; }
-    main .hero div h1 {
+    main .hero div h1,
+    main .hero2 div h1 {
       margin: 10px 0 0 0; }
-    main .hero div button {
+    main .hero div button,
+    main .hero2 div button {
       background-color: black;
       color: white; }
+  main .month {
+    margin-top: 20px;
+    text-align: center; }
+  main .sub-nav ul {
+    padding: 13.5px; }
+    main .sub-nav ul li {
+      display: inline; }
+  main .slideshow {
+    margin-top: 20px;
+    text-align: center; }
+    main .slideshow img {
+      width: 100%; }
+    main .slideshow a {
+      text-decoration: underline; }
+  main .hero3 {
+    margin-top: 20px;
+    position: relative; }
+    main .hero3 img {
+      width: 100%; }
+    main .hero3 .content {
+      color: white;
+      position: absolute;
+      bottom: 20px;
+      left: 20px; }
+      main .hero3 .content a {
+        color: white; }
+
+@media (min-width: 1024px) {
+  main .hero {
+    margin-top: 20px;
+    position: relative; }
+    main .hero img {
+      width: 100%; }
+    main .hero .content {
+      color: white;
+      position: absolute;
+      bottom: 20px;
+      left: 20px; }
+      main .hero .content a {
+        color: white; }
+  main .video {
+    margin-top: 20px; }
+  main .hero2 {
+    padding-left: 13.5px;
+    padding-right: 13.5px;
+    margin-top: 0; }
+  main .sub-nav {
+    text-align: center; } }
+footer {
+  background-color: grey;
+  margin-top: 20px;
+  padding: 0; }
+  footer div {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 5px; }
+    footer div span {
+      float: right;
+      font-size: 10px; }
+  footer p {
+    margin: 10px;
+    text-align: center;
+    font-size: 10px; }

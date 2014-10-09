@@ -22,26 +22,121 @@ main {
 
   // hero
   .hero,
+  .hero2
    {
+    @include hero-out;
+  }
+
+  // THIS MONTH
+  .month {
     margin-top: 20px;
+    text-align: center;
+  }
 
-    img {
-      width: 100%;
-    }
-    div {
-      h1 {
-        margin: 10px 0 0 0;
-      }
-
-      p {
-
-      }
-
-      button {
-        background-color: black;
-        color: white;
+  // SUB NAV
+  .sub-nav {
+    ul {
+      padding: 13.5px;
+      li {
+        display: inline;
       }
     }
   }
 
+  // slideshow
+  .slideshow {
+    margin-top: 20px;
+    text-align: center;
+    img {
+      width: 100%;
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .hero3 {
+    @include hero-in;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+
+    // promo
+    .promo {
+
+      div {
+
+        a {
+          span {
+
+          }
+        }
+
+
+      }
+    }
+
+    // hero
+    .hero {
+      @include hero-in;
+    }
+
+    .video {
+      margin-top: 20px;
+    }
+
+    .hero2 {
+      padding-left: 13.5px;
+      padding-right: 13.5px;
+      margin-top: 0;
+    }
+
+    // THIS MONTH
+    .month {
+
+    }
+
+    // SUB NAV
+    .sub-nav {
+      text-align: center;
+      ul {
+
+        li {
+
+        }
+      }
+    }
+
+    // slideshow
+    .slideshow {
+
+      img {
+
+      }
+      a {
+
+      }
+    }
+
+    .hero2 {
+
+
+      > div {
+
+        img {
+
+        }
+
+        .content {
+
+
+          a {
+
+          }
+        }
+      }
+    }
+  }
 }

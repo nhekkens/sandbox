@@ -6,16 +6,55 @@ a {
   }
 }
 
+@mixin hero-in {
 
-@mixin icon {
-  height: 100%;
-  text-align: center;
-  padding: 10px 0 0 0;
+  margin-top: 20px;
+  position: relative;
   img {
     width: 100%;
-
   }
+
+  .content {
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+
+    a {
+      color: white;
+    }
+  }
+}
+
+@mixin hero-out {
+  margin-top: 20px;
+  padding: 0;
+
+  img {
+    width: 100%;
+  }
+  div {
+    h1 {
+      margin: 10px 0 0 0;
+    }
+
+    p {
+
+    }
+
+    button {
+      background-color: black;
+      color: white;
+    }
+  }
+}
+
+@mixin icon {
+  text-align: center;
+  line-height: 60px;
+  font-size: 18px;
 }
 
 @import 'header';
 @import 'main';
+@import 'footer';
